@@ -291,7 +291,7 @@ p {
     }
 }
 
-@media screen and (max-width: 520git push -u origin mainpx) {
+@media screen and (max-width: 520px) {
     .dop_meny {
         width: 42%;
     }
