@@ -16,12 +16,15 @@ body {
 .header {
     background-image: url(images/snow1.jpeg);
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: cover;
+    background-position: center;
     position: relative;
     min-height: 892px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
+    text-align: center;
 }
 
 .shapka {
@@ -30,6 +33,7 @@ body {
     justify-content: space-between;
     display: flex;
     flex-direction: row;
+    margin-top: 0;
 }
 
 .dop_item:hover a {
@@ -43,8 +47,9 @@ body {
 
 .shapka_tipe {
     display: flex;
-    width: 26%;
-    justify-content: space-between;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
 }
 
 .learn_more {
@@ -131,12 +136,13 @@ p {
 
 .dop_meny {
     display: flex;
-    width: 15%;
-    justify-content: space-between;
+    width: 100%;
+    justify-content: flex-end;
 }
 
 .mouse {
     margin-top: 30px;
+    margin-bottom: 300px;
 }
 
 .content {
@@ -218,23 +224,90 @@ p {
 
 }
 
-.content_item2 {
-    margin: 0 20px 0 20px;
+ul {
+    width: 380px;
+    height: 350px;
+    text-align: center;
+    list-style-type: none;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px 10px 0 0;
 }
 
-.content_item,
-.content_item2 img {
+.personal {
+    background-color: #000;
+    height: 47px;
+    color: #fff;
+    font-size: 14px;
+    line-height: 47px;
+
+
+}
+
+.dolar {
+    background-color: #231F20;
+    height: 48px;
+    font-size: 35px;
+    font-weight: bold;
+    color: #fff;
+    line-height: 48px;
+}
+
+span {
+    color: #929496;
+    font-weight: normal;
+    font-size: 24px;
+}
+
+.row {
+    background-color: #fff;
+    color: #929496;
+    height: 77px;
+    font-size: 17px;
+    line-height: 1.5em;
+    border-bottom: 1px dashed #929496;
+    padding-top: 12px;
+}
+
+.info {
+    color: #000;
+    background-color: #fff;
+    border-bottom: 1px dashed #929496;
+    height: 42px;
+    line-height: 42px;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.get {
+    color: #70CBCE;
+    background: #F2F2F2;
+    height: 52px;
+    font-weight: bold;
+    font-size: 17px;
+    text-transform: uppercase;
+    line-height: 52px;
+}
+
+.get:hover {
+    color: #F2F2F2;
+    background-color: #929496;
+}
+
+
+
+.content_item {
     transition-property: transform;
     transition-duration: 1.8s;
     transform: scale(1);
 }
 
-.content_item:hover,
-.content_item2:hover img {
+.content_item:hover {
     transform: scale(1.2);
     transition-property: transform;
     transition-duration: 1.8s;
-
+    z-index: 3;
+    box-shadow: 0 0 10px #000;
 }
 
 .footer {
@@ -308,6 +381,35 @@ p {
 
 }
 
+@media screen and (max-width: 1160px) {
+    .content_items {
+        min-height: 1110px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+
+    .content_text {
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .content_text>div {
+        margin-top: 10px;
+    }
+
+    .iphone {
+        transform: translateY(-10%);
+    }
+
+    .footer_social {
+        width: 15%;
+    }
+
+}
+
 @media screen and (max-width: 768px) {
     .content_text {
         flex-direction: column;
@@ -322,30 +424,20 @@ p {
         width: 90%;
     }
 
-    .dop_meny {
-        width: 25%;
-        justify-content: space-between;
-    }
 
     .shapka_text {
         width: 90%;
         justify-content: center;
     }
 
-    .shapka_tipe {
-        display: flex;
-        width: 26%;
-        justify-content: space-between;
-    }
-
-    .shapka_tipe {
-        width: 50%;
-        justify-content: space-between;
-    }
 
     .content {
         background-size: 140% 32%;
         background-position: top center;
+    }
+
+    .iphone {
+        transform: translateY(-12%);
     }
 
     .content_text>div {
@@ -363,7 +455,6 @@ p {
 
     .content_items {
         width: 100%;
-        min-height: 1110px;
         flex-direction: column;
         align-items: center;
     }
@@ -388,9 +479,7 @@ p {
 }
 
 @media screen and (max-width: 520px) {
-    .dop_meny {
-        width: 42%;
-    }
+
 
     .shapka {
         padding: 20px 0 80px 0;
@@ -408,6 +497,7 @@ p {
 
     .request_invite {
         margin-top: 20px;
+        margin-bottom: 40px;
     }
 
     .mouse {
